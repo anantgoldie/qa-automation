@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Calculator-TestSuite" verbose="1">
+
+	<test name="TestSetup">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.desktop.CalculatorSetup" />
+		</classes>
+	</test>
+
+	<test name="CalculatorTask1">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.desktop.CalculatorTask1">
+				<methods>
+					<include name="checkWindowName" />
+					<include name="checkInitialValue" />
+					<include name="add" />
+					<include name="subtract" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="CalculatorTask2">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.desktop.CalculatorTask2">
+				<methods>
+					<include name="checkWindowName" />
+					<include name="checkInitialValue" />
+					<include name="add" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
