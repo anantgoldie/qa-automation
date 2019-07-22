@@ -3,6 +3,15 @@ package com.automation.assignment.runner.desktop;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.windows.WindowsElement;
 
+/**
+* Interface to declare calculator specific items. 
+*
+* @author  anantchoubey
+* @version 1.0
+* @since   2019-JUL-22 
+* 
+*/
+
 public class Calculator {
 	public static AppiumDriver<WindowsElement> session = null;
 

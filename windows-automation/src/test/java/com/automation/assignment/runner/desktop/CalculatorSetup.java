@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import com.automation.assignment.constants.AppiumConfig;
+import com.automation.assignment.constants.AppConfig;
 import com.automation.assignment.utils.AppLogger;
 
 import io.appium.java_client.windows.WindowsDriver;
@@ -35,10 +35,10 @@ public class CalculatorSetup {
 			AppLogger.LOG.info("Creating drivers!!!");
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			capabilities.setCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe"); // to get app appid, powershell - Get-AppxPackage *<app_name>
-			capabilities.setCapability(CapabilityType.PLATFORM_NAME, AppiumConfig.WINDOWS_PLATFORM);
+			capabilities.setCapability(CapabilityType.PLATFORM_NAME, AppConfig.WINDOWS_PLATFORM);
 			capabilities.setCapability("deviceName", "PC");
 
-			Calculator.session = new WindowsDriver<WindowsElement>(new URL(AppiumConfig.APPIUM_HOST_URL), capabilities);
+			Calculator.session = new WindowsDriver<WindowsElement>(new URL(AppConfig.APPIUM_HOST_URL), capabilities);
 			Calculator.session.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
             Assert.assertNotNull(Calculator.session.findElementByAccessibilityId("CalculatorResults"));

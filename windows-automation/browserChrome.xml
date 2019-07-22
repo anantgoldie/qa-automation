@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Calculator-TestSuite" verbose="1">
+
+	<test name="TestSetup">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.browser.BrowserSetup" />
+		</classes>
+	</test>
+
+	<parameter name="google-url" value="https://www.google.com" />
+	<parameter name="tesla-car" value="tesla car" />
+	<parameter name="wolkswagen-car" value="wolkswagen" />
+
+	<test name="BrowserTask1">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.browser.BrowserTask1">
+				<methods>
+					<include name="navigateURL" />
+					<include name="searchText" />
+					<include name="checkResults" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="BrowserTask2">
+		<classes>
+			<class
+				name="com.automation.assignment.runner.browser.BrowserTask2">
+				<methods>
+					<include name="navigateURL" />
+					<include name="searchText" />
+					<include name="checkResults" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

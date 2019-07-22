@@ -1,10 +1,16 @@
 package com.automation.assignment.runner.browser;
 
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
 
-import io.appium.java_client.AppiumDriver;
+/**
+* Interface to declare browser specific items. 
+*
+* @author  anantchoubey
+* @version 1.0
+* @since   2019-JUL-22 
+* 
+*/
 
 public class Browser {
-	public static AppiumDriver<WebElement> session = null;
-	public static WebElement element = null;
+	public static WebDriver driver = null;
 }

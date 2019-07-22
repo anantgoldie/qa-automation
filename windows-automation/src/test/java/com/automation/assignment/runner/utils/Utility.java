@@ -9,7 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.automation.assignment.constants.AppiumConfig;
+import com.automation.assignment.constants.AppConfig;
 import com.automation.assignment.runner.browser.Browser;
 import com.automation.assignment.runner.desktop.Calculator;
 import com.automation.assignment.utils.AppLogger;
@@ -18,7 +18,7 @@ public class Utility {
 	public static String getScreenShotLocation(String folderName) {
 		String date = new SimpleDateFormat("MM-dd-yyyy").format(new Date(System.currentTimeMillis()));
 		String screenShotLocation = System.getProperty("user.home")
-				+ "/Desktop/Automation/" + date + "/" + folderName + "/";
+				+ AppConfig.SCREENSHOT_LOCATION + date + "/" + folderName + "/";
 
 		return screenShotLocation;
 	}
@@ -30,7 +30,7 @@ public class Utility {
 	public static void getCalculatorScreenshot(String outputlocation) {
 
 
-		if (AppiumConfig.CAPTURE_SCREEN) {
+		if (AppConfig.CAPTURE_SCREEN) {
 
 			File srcFiler = ((TakesScreenshot) Calculator.session).getScreenshotAs(OutputType.FILE);
 			try {
@@ -45,9 +45,9 @@ public class Utility {
 	public static void getBrowserScreenshot(String outputlocation) {
 
 
-		if (AppiumConfig.CAPTURE_SCREEN) {
+		if (AppConfig.CAPTURE_SCREEN) {
 
-			File srcFiler = ((TakesScreenshot) Browser.session).getScreenshotAs(OutputType.FILE);
+			File srcFiler = ((TakesScreenshot) Browser.driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(srcFiler, new File(outputlocation));
 			} catch (IOException e) {

@@ -9,7 +9,6 @@
 	<description>Test windows calculator automation</description>
 
 	<dependencies>
-		<!-- -->
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -68,7 +67,8 @@
 					<configuration>
 						<printSummary>true</printSummary>
 						<suiteXmlFiles>
-							<suiteXmlFile>calculator.xml</suiteXmlFile>
+							<!-- <suiteXmlFile>calculator.xml</suiteXmlFile> -->
+							<!-- <suiteXmlFile>browserChrome.xml</suiteXmlFile> -->
 							<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 						</suiteXmlFiles>
 					</configuration>
